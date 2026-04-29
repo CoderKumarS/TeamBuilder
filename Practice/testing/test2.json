@@ -1,0 +1,193 @@
+{
+    "type": "separation",
+    "WorkFlowForm": {
+        "is_new_separation": true,
+        "name": "Beacon te2",
+        "description": "Default separation workflow for all full-time employees.",
+        "assign_to": [
+            "assignment_a635182bbd373d",
+            "assignment_a6320758f0d731",
+            "assignment_a6302a7088cc98",
+            "assignment_a62d1a994c9119",
+            "all_employees"
+        ],
+        "or_and": "0",
+        "is_national_applicability": false,
+        "nations": {
+            "check": null,
+            "countries": []
+        },
+        "support_roles": [],
+        "separation_message": "<p>test</p>",
+        "allow_past_date_of_resignation": true,
+        "auto_fill_last_working_day": true,
+        "enable_custom_work_flow_based": 1,
+        "is_series": false,
+        "is_conditional": false,
+        "escalation_allowed": false,
+        "escalation_days": 15,
+        "escalation_context": null,
+        "escalation_to": "2",
+        "archive_enable": false,
+        "archive_days": null,
+        "capture_standard_fields": true,
+        "restrict_on_approval_flow_on_revoke": false,
+        "default_approval_flow_on_revoke": "a6300fe891aaca",
+        "date_of_exit_restrictions": [
+            "restrict_on_weekly_off"
+        ],
+        "custom_workflow_stages": [
+            {
+                "separation_category": "default",
+                "customworkflow_id": "a63217c44709b8",
+                "on_notice_name": "On Notice"
+            }
+        ]
+    },
+    "SeparationSet": [
+        {
+            "role": "5",
+            "action": "newform_a69d4d4f0d4da9597212397",
+            "title": "Admin Initiates Separation",
+            "options": "",
+            "exclude_default_capture": true,
+            "exception": false,
+            "approval_flow": "use_decision_matrix",
+            "approval_flow_on_revoke": "a634fc5246a2c1",
+            "decision_matrix": "a68940040bebd9",
+            "default_approval_flow": "a6377860ed0203",
+            "confidential_visibility": [
+                "1"
+            ],
+            "step_level_email_config": [
+                {
+                    "step_type": "when_separation_is_initiated",
+                    "flow_template_id": "email_a654c6ea0501f3",
+                    "default_recepients": [
+                        "initiator"
+                    ],
+                    "additional_recepients": [
+                        "1"
+                    ],
+                    "cc_users_recepients": [
+                        "579736"
+                    ],
+                    "cc_roles_recepients": [
+                        "2"
+                    ]
+                }
+            ],
+            "parent_set_id": "a69d4fc81f4093"
+        },
+        {
+            "role": "l1position",
+            "action": "newform_a69d4ca153fc0c127985737",
+            "title": "Employee Initiates Separation",
+            "options": "",
+            "exclude_default_capture": true,
+            "exception": false,
+            "approval_flow": "a635292cd03570",
+            "approval_flow_on_revoke": null,
+            "decision_matrix": null,
+            "default_approval_flow": "",
+            "confidential_visibility": [
+                "l4manager"
+            ],
+            "step_level_email_config": [],
+            "parent_set_id": "a69d4fc81f4225"
+        }
+    ],
+    "WorkFlow_set": [],
+    "SepEmailRecipient": [
+        {
+            "template_type": "approval_rejected_template",
+            "template": "email_a68c7ff6db92b2",
+            "role": [
+                "onboarding_spoc",
+                "standard_role2",
+                "hiring_lead",
+                "3"
+            ]
+        }
+    ],
+    "SummaryFieldsSeparationAccess": [
+        {
+            "date_of_resignation_view": [
+                "1",
+                "HRBP"
+            ],
+            "date_of_resignation_view_approval": [
+                "2",
+                "HRBP"
+            ],
+            "date_of_resignation_edit": [
+                "5",
+                "HRBP"
+            ],
+            "lwd_as_per_notice_period_view": [
+                "1"
+            ],
+            "lwd_as_per_notice_period_view_approval": [
+                "2"
+            ],
+            "notice_period_assigned_view": [
+                "1"
+            ],
+            "notice_period_assigned_view_approval": [
+                "2"
+            ],
+            "requested_last_day_view": [
+                "1"
+            ],
+            "requested_last_day_view_approval": [
+                "2"
+            ],
+            "requested_last_day_edit": [
+                "5"
+            ],
+            "recovery_days_view": [],
+            "recovery_days_view_approval": [],
+            "recovery_days_edit": [],
+            "separation_reason_including_other_view": [],
+            "separation_reason_including_other_view_approval": [],
+            "separation_reason_including_other_edit": [],
+            "initiator_form_view": [],
+            "initiator_form_view_approval": [],
+            "proposed_last_day_view": [],
+            "proposed_last_day_view_approval": [],
+            "proposed_last_day_edit": [],
+            "proposed_recovery_days_view": [],
+            "proposed_recovery_days_view_approval": [],
+            "proposed_recovery_days_edit": [],
+            "reason_for_recovery_days_view": [],
+            "reason_for_recovery_days_view_approval": [],
+            "reason_for_recovery_days_edit": [],
+            "final_lwd_view": [],
+            "final_lwd_view_approval": [],
+            "final_lwd_edit": [
+                "5"
+            ],
+            "final_recovery_days_view": [],
+            "final_recovery_days_view_approval": [],
+            "final_recovery_days_edit": [],
+            "final_reason_for_recovery_days_view": [],
+            "final_reason_for_recovery_days_view_approval": [],
+            "final_reason_for_recovery_days_edit": [],
+            "final_separation_category_view": [],
+            "final_separation_category_view_approval": [],
+            "final_separation_category_edit": [],
+            "final_separation_reason_view": [],
+            "final_separation_reason_view_approval": [],
+            "final_separation_reason_edit": [],
+            "do_not_hire_view": [],
+            "do_not_hire_view_approval": [],
+            "do_not_hire_edit": [],
+            "event_subevent_view": [],
+            "event_subevent_view_approval": [],
+            "event_subevent_edit": []
+        }
+    ],
+    "save_as_draft": false,
+    "id": "a69d4fc82025a5100311810",
+    "pbqBeYWPUn": "WVZpSDNKNXFfT1hkM3pFVzFSNmZSWnVXMTR4c0JyQVRqs_6RPixuet1r5wkCC2I24sZmu7ix5pS_VS-xdX3P6g=="
+}
